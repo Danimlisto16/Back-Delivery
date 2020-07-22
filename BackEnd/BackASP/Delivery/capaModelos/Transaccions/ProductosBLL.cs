@@ -47,7 +47,7 @@ namespace capaModelos.Transaccions
             }
         }
 
-        public static void Update(PRODUCTO p)
+        public static bool Update(PRODUCTO p)
         {
             using (DeliveryEntidades db = new DeliveryEntidades())
             {
@@ -59,12 +59,13 @@ namespace capaModelos.Transaccions
                         db.Entry(p).State = System.Data.Entity.EntityState.Modified;
                         db.SaveChanges();
                         transaction.Commit();
+                        return true;
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine("No se ha podido actualizar  el producto " + ex.Message);
                         transaction.Rollback();
-                        throw ex;
+                        return false;
                     }
                 }
             }

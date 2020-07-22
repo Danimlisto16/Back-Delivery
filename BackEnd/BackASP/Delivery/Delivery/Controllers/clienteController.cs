@@ -63,7 +63,7 @@ namespace Delivery.Controllers
         {
             try
             {
-                ClienteBLL.Delete(id);
+                ProductosBLL.Delete(id);
                 return Content(HttpStatusCode.OK, "Borrado con éxito");
             }
             catch (Exception ex)
