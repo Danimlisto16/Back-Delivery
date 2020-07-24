@@ -9,6 +9,7 @@
 
 namespace capaModelos.Modelos
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,8 +20,9 @@ namespace capaModelos.Modelos
         public int id_producto { get; set; }
         public Nullable<int> cantidad { get; set; }
         public Nullable<decimal> subtotal { get; set; }
-    
+        [JsonIgnore]
         public virtual CAB_FACTURA CAB_FACTURA { get; set; }
+        [JsonIgnore]
         public virtual PRODUCTO PRODUCTO { get; set; }
     }
 }

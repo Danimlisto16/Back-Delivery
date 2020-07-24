@@ -9,6 +9,7 @@
 
 namespace capaModelos.Modelos
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -31,6 +32,8 @@ namespace capaModelos.Modelos
         public virtual ESTADO_ENVIO ESTADO_ENVIO { get; set; }
         public virtual ESTADO_PAGO ESTADO_PAGO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+        [JsonIgnore]
         public virtual ICollection<DETALLE_FACTURA> DETALLE_FACTURA { get; set; }
     }
 }
