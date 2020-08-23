@@ -11,7 +11,7 @@ using System.Web.Http.Cors;
 namespace Delivery.Controllers
 {
     //CORS
-    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class producto_categoriaController : ApiController
     {
         public IHttpActionResult Get()

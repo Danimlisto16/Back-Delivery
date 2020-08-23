@@ -9,7 +9,6 @@
 
 namespace capaModelos.Modelos
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -29,10 +28,7 @@ namespace capaModelos.Modelos
         public string imageUrl { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-        [JsonIgnore]
         public virtual ICollection<DETALLE_FACTURA> DETALLE_FACTURA { get; set; }
-        [JsonIgnore]
         public virtual PRODUCTO_CATEGORIA PRODUCTO_CATEGORIA { get; set; }
     }
 }
